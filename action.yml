@@ -12,7 +12,7 @@ runs:
       id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.os }}-yarnlock-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
-          ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-          ${{ runner.os }}-
+          ${{ runner.os }}-yarnlock-${{ hashFiles('**/yarn.lock') }}
+          ${{ runner.os }}-yarnlock
